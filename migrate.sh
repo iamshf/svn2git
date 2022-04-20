@@ -1,13 +1,13 @@
 #!/bin/sh
 
 # 要转换的SVN地址
-SVN_URL="$1/$2"
+SVN_URL="$1"
 FOLDER_NAME="$2"
 
 
 
 # svn转git
-git svn clone $SVN_URL "./${FOLDER_NAME}" --no-metadata --trunk=trunk --branches=branches --tags=tags  --authors-file ./users --no-minimize-url eisp-eipsc-parent-to-git
+git svn clone $SVN_URL $FOLDER_NAME --no-metadata --trunk=trunk --branches=branches --tags=tags  --authors-file ./users --no-minimize-url eisp-eipsc-parent-to-git
 
 cd $FOLDER_NAME
 
